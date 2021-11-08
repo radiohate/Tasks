@@ -1,17 +1,17 @@
 package com.company;
 
-import apple.laf.JRSUIUtils;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
 
+    public static void main(String[] args) throws IOException {
+	// write your code here
         BufferedReader br1 = new BufferedReader(new InputStreamReader(new FileInputStream("population.txt"), "Windows-1251"));
         HashMap<String, String> millionMap = new HashMap<>();
         String s;
@@ -22,11 +22,6 @@ public class Main {
             }
         }
         br1.close();
-
-      /*  for (Map.Entry<String,String> entry: millionMap.entrySet()) {
-            System.out.println(entry.getKey() + "   " + entry.getValue());
-        }
-*/
 
         BufferedReader br2 = new BufferedReader(new InputStreamReader(new FileInputStream("exclude.txt"),"Windows-1251"));
         while ((s = br2.readLine()) != null) {
